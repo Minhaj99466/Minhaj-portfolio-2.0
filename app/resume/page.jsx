@@ -225,6 +225,26 @@ const page = () => {
                 </ul>
               </div>
             </TabsContent>
+
+            {/* about me */}
+
+            <TabsContent value='about' className="w-full h-full">
+              <div className="flex flex-col gap-[30px] ">
+                <div className="flex flex-col gap-[30px] text-center xl:text-left">
+                  <h3 className="text-2xl font-bold">{about.title}</h3>
+                  <p className="max-w-[500px] text-white/60 mx-auto xl:mx-0">{about.description}</p>
+                </div>
+                <ul className="grid grid-cols-1 xl:grid-cols-2 mx-auto xl:mx-0 gap-y-4 max-w-[620px] ">
+                  {about.info.map((item, index) => (
+                    <li key={index} className="flex justify-center items-center text-wrap xl:justify-start gap-2">
+                   <span className="text-white/60">{item.fieldName}:</span>
+                   <span className="text-lg">{item.fieldValue}</span>
+                    
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </TabsContent>
           </div>
         </Tabs>
       </div>
