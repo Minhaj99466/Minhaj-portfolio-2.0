@@ -78,7 +78,7 @@ const page = () => {
               <p className="text-white/60">{project.description}</p>
               <ul className="flex flex-wrap gap-4 text-accent">
                 {project.stack.map((item, index) => (
-                  <li >{item.name}
+                  <li key={index}>{item.name}
                     {index !== project.stack.length - 1 && ','}
                   </li>
 
