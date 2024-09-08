@@ -27,7 +27,7 @@ const info = [
 
 const Contact = () => {
   return (
-    <motion.section initial={{ opacity: 0 }} animate={{ opacity: 1, transition: { delay: 2.4, ease: 'easeIn', duration: 2.4 } }} className="py-6 xl:py-0">
+    <motion.section initial={{ opacity: 0 }} animate={{ opacity: 1, transition: { delay: 2.4, ease: 'easeIn', duration: 0.4 } }} className="py-6 xl:py-0">
       <div className="container mx-auto">
         <div className="flex flex-col xl:flex-row gap-[30px]">
           <div className="xl:h-[54%] order-2 xl:order-none">
