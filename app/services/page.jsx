@@ -5,7 +5,7 @@ import { BsArrowDownRight } from "react-icons/bs";
 import { animate, motion } from 'framer-motion'
 
 
-const page = () => {
+const Service = () => {
   const data = [
     {
       num: "01",
@@ -59,4 +59,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Service

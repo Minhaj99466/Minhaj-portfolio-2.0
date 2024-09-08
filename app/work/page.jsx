@@ -58,7 +58,7 @@ const work = [
   },
 ]
 
-const page = () => {
+const WorkPage = () => {
   const [project, setProject] = useState(work[0])
 
   const handleSlideChange=(swiper)=>{
@@ -141,4 +141,4 @@ const page = () => {
   )
 }
 
-export default page
+export default WorkPage

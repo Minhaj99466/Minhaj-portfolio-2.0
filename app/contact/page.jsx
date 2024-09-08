@@ -25,7 +25,7 @@ const info = [
   }
 ]
 
-const page = () => {
+const Contact = () => {
   return (
     <motion.section initial={{ opacity: 0 }} animate={{ opacity: 1, transition: { delay: 2.4, ease: 'easeIn', duration: 2.4 } }} className="py-6 xl:py-0">
       <div className="container mx-auto">
@@ -80,4 +80,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Contact
