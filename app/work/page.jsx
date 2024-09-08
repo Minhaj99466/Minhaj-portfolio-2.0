@@ -37,7 +37,7 @@ const work = [
       { name: 'bootstrap' },
       { name: 'express.js' },
     ],
-    image: '/assets/work/Screenshot 2024-01-16 094306.png',
+    image: '/assets/work/Screenshot 2024-09-08 180212.png',
     live: '',
     github: '',
   },
@@ -52,7 +52,7 @@ const work = [
       { name: 'bootstrap' },
       { name: 'express.js' },
     ],
-    image: '/assets/work/Screenshot 2024-01-16 094306.png',
+    image: '/assets/work/Screenshot 2024-09-08 182143.png',
     live: '',
     github: '',
   },
@@ -123,11 +123,10 @@ const WorkPage = () => {
             className="xl:h-[460px] mb-12 xl:mb-0">
               {work.map((item,index)=>(
                 <SwiperSlide className="w-full" key={index}>
-                  <div className="h-[43
-                  0px] relative group flex justify-center items-center bg-pink-50/20">
+                  <div className="h-[430px] relative group flex justify-center items-center bg-pink-50/20">
                   <div className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-10 "></div>
                   <div className="relative w-full h-full">
-                    <Image fill  src={item.image} alt="work-image" className="object-cover"/>
+                    <Image fill  src={item.image} alt="work-image" className="object-fill"/>
                   </div>
                   </div>
                 </SwiperSlide>

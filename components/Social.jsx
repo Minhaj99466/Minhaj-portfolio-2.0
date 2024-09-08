@@ -5,20 +5,16 @@ import Link from "next/link";
 const mediaLinks= [
     {
 icon:<FaGithub/>,
-path:""
+path:"https://github.com/Minhaj99466"
 },
     {
 icon:<FaLinkedin/>,
-path:""
+path:"https://linkedin.com/in/minhaj-mm"
 },
     {
 icon:<FaWhatsapp/>,
-path:""
+path:"https://wa.me/9946631792"
 },
-    {
-icon:<FaGithub/>,
-path:"ddd"
-}
 ]
 
 const Social = ({containerStyles,iconStyles}) => {
