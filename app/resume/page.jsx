@@ -7,6 +7,9 @@ import {
   FaReact,
   FaFigma,
   FaNodeJs,
+  FaJsSquare,
+  FaBootstrap,
+  FaDatabase
 } from "react-icons/fa";
 import { SiTailwindcss, SiNextdotjs } from "react-icons/si";
 import { delay, motion } from "framer-motion";
@@ -17,7 +20,7 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/comp
 const about = {
   title: "about me",
   description:
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus architecto, eveniet sunt mollitia incidunt fuga modi accusamus!",
+    "Here’s a snapshot of who I am, where I’m based, and how you can connect with me. ",
   info: [
     {
       fieldName: "Name",
@@ -25,7 +28,7 @@ const about = {
     },
     {
       fieldName: "Phone",
-      fieldValue: "+91 9946631792",
+      fieldValue:"(+91) 9946631792",
     },
     {
       fieldName: "Nationality",
@@ -50,25 +53,20 @@ const experience = {
   icon: "",
   title: "My experience",
   description:
-    "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est corrupti, magni et qui cumque cum ullam voluptatum?",
+   " Explore my experience to see how I’ve contributed to various teams and projects with skill and innovation.",
   items: [
     {
       company: "Freelancer",
       position: "Full Stack Developer",
-      duration: "2023 -2024",
+      duration: "2024 - present",
     },
     {
-      company: "Freelancer",
+      company: "Innobyte Services",
       position: "Full Stack Developer",
-      duration: "2023 -2024",
+      duration: "2024 -2024",
     },
     {
-      company: "Freelancer",
-      position: "Full Stack Developer",
-      duration: "2023 -2024",
-    },
-    {
-      company: "Freelancer",
+      company: "Brototype",
       position: "Full Stack Developer",
       duration: "2023 -2024",
     },
@@ -77,8 +75,7 @@ const experience = {
 const education = {
   icon: "",
   title: "My education",
-  description:
-    "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est corrupti, magni et qui cumque cum ullam voluptatum?",
+  description:"A journey through various educational experiences provided me deep understanding and practical skills in this field. Each step in my education has contributed to my growth and expertise.",
   items: [
     {
       institution: "Bootcamp",
@@ -86,14 +83,19 @@ const education = {
       duration: "2023 -2024",
     },
     {
-      institution: "Freelancer",
-      degree: "Full Stack Developer",
-      duration: "2023 -2024",
+      institution: "Accounting Society",
+      degree: "Accountant",
+      duration: "2022 -2023",
     },
     {
-      institution: "Freelancer",
-      degree: "Full Stack Developer",
-      duration: "2023 -2024",
+      institution: "Mhes College Vadakara",
+      degree: "Bachelor of Commerce",
+      duration: "2018-2021",
+    },
+    {
+      institution: "Emjay Vhse",
+      degree: "Higher secondary",
+      duration: "2016-2018",
     },
   ],
 };
@@ -101,7 +103,7 @@ const education = {
 const skills = {
   title: "My skills",
   description:
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus vero quos ipsum dolorum facilis, eos nulla consequatur.",
+    "My expertise spans full-stack development, problem-solving, and innovative solutions, enabling me to tackle complex projects effectively.",
   skillList: [
     {
       icon: <FaHtml5 />,
@@ -126,6 +128,14 @@ const skills = {
     {
       icon: <SiTailwindcss />,
       name: "tailwind.css js",
+    },
+    {
+      icon: <FaJsSquare />,
+      name: "Javascript",
+    },
+    {
+      icon: <FaFigma />,
+      name: "Figma",
     },
   ],
 };
@@ -156,10 +166,10 @@ const Resume = () => {
               <div className="flex flex-col gap-[20px] text-center xl:text-left">
                 <h3 className="text-2xl font-bold">{experience.title}</h3>
                 <p className="max-w-[500px] text-white/60 mx-auto xl:mx-0">{experience.description}</p>
-                <ScrollArea className="h-[350px] ">
+                <ScrollArea className="h-[300px] ">
                   <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[10px] ">
                     {experience.items.map((item, index) => (
-                      <li key={index} className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1">
+                      <li key={index} className="bg-[#232329] h-[160px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1">
                         <span className="text-accent">{item.duration}</span>
                         <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">{item.position}</h3>
                         <div className="flex items-center gap-3">
@@ -179,11 +189,11 @@ const Resume = () => {
             <TabsContent value='education' className="w-full">
               <div className="flex flex-col gap-[20px] text-center xl:text-left">
                 <h3 className="text-2xl font-bold">{education.title}</h3>
-                <p className="max-w-[500px] text-white/60 mx-auto xl:mx-0">{experience.description}</p>
-                <ScrollArea className="h-[350px] ">
+                <p className="max-w-[500px] text-white/60 mx-auto xl:mx-0">{education.description}</p>
+                <ScrollArea className="h-[300px] ">
                   <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[10px] ">
                     {education.items.map((item, index) => (
-                      <li key={index} className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1">
+                      <li key={index} className="bg-[#232329] h-[160px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1">
                         <span className="text-accent">{item.duration}</span>
                         <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">{item.degree}</h3>
                         <div className="flex items-center gap-3">
