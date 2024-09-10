@@ -18,8 +18,8 @@ const data=[
     num:8,
 },
     {
-    text:"Code commit",
-    num:15,
+    text:"Repos commit",
+    num:16,
 },
 
 ]

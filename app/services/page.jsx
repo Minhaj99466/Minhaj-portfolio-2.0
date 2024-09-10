@@ -9,26 +9,25 @@ const Service = () => {
   const data = [
     {
       num: "01",
-      title: 'Web Development',
-      description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has '
+      title: 'MERN Web Solutions',
+      description: 'I specialize in full-stack development using MongoDB, Express, React, and Node.js to build dynamic web applications.'
     },
     {
       num: "02",
-      title: 'Web Development',
-      description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has '
+      title: 'Front-End Development',
+      description: 'With React.js and Next.js, I create interactive, responsive, and efficient user interfaces that offer a seamless experience.'
     },
     {
       num: "03",
-      title: 'Web Development',
-      description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has '
+      title: 'Back-End Development',
+      description: 'Using Node.js and Express, I build scalable and robust server-side applications with secure REST APIs.'
     },
     {
       num: "04",
-      title: 'Web Development',
-      description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has '
+      title: 'Figma-Crafted Designs',
+      description: 'I design modern and user-centric websites using Figma, creating visually appealing and functional UI layouts.'
     },
-
-  ]
+]
 
 
   return (
@@ -44,13 +43,13 @@ const Service = () => {
                 <div className='text-4xl text-outline font-extrabold text-transparent ' >
                   {item.num}
                 </div>
-                <Link className='w-[60px] h-[60px] rounded-full bg-white flex justify-center items-center group-hover:bg-accent-hover  transition-all hover:-rotate-45 duration-700'  href="hjg">
+                <Link className='w-[50px] h-[50px] rounded-full bg-white flex justify-center items-center group-hover:bg-accent-hover  transition-all hover:-rotate-45 duration-700'  href="hjg">
                   <BsArrowDownRight className='text-3xl text-primary '/>
                 </Link>
               </div>
-              <h2 className='text-[42px]   font-bold group-hover:text-accent-hover transition-all duration-500 text-white/80' >{item.title}</h2>
+              <h2 className='text-[32px]   font-bold group-hover:text-accent-hover transition-all duration-500 text-white/80' >{item.title}</h2>
               <p className='text-white/60'>{item.description}</p>
-              <div className='border-b border-white/20  w-full'></div>
+              <div className='border-b mt-6 border-white/20  w-full'></div>
             </div>
           ))}
         </motion.div>
