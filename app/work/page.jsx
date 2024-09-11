@@ -126,7 +126,7 @@ const WorkPage = () => {
                   <div className="h-[430px] relative group flex justify-center items-center bg-pink-50/0">
                   <div className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-10 "></div>
                   <div className="relative w-full h-full">
-                    <Image fill  src={item.image} alt="work-image" className="xl:object-cover object-contain"/>
+                    <Image fill  src={item.image} alt="work-image" className="object-contain"/>
                   </div>
                   </div>
                 </SwiperSlide>
