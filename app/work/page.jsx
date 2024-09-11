@@ -13,8 +13,8 @@ import WorkSliderBtns from "@/components/WorkSliderBtns"
 const work = [
   {
     num: "01",
-    name: 'E-Commerce',
-    description: "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Id sit, laudantium pariatur ullam vero cupiditate earum eum.",
+    name: 'Football(E-Commerce)',
+    description: "Built an e-commerce site for branded footballs with a clean interface, secure payments, responsive design, and seamless shopping.",
     stack: [
       { name: 'html 5' },
       { name: 'css3' },
@@ -23,13 +23,13 @@ const work = [
       { name: 'express.js' },
     ],
     image: '/assets/work/Screenshot 2024-01-16 094306.png',
-    live: '',
-    github: '',
+    live: 'http://kurrah.shop/',
+    github: 'https://github.com/Minhaj99466/E-commerce.git',
   },
   {
     num: "02",
-    name: 'E-Commerce',
-    description: "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Id sit, laudantium pariatur ullam vero cupiditate earum eum.",
+    name: 'Hiring Website',
+    description: "Developed a hiring platform for artists, featuring job listings, artist profiles, real-time chat, and secure application management.",
     stack: [
       { name: 'html 5' },
       { name: 'css3' },
@@ -38,13 +38,13 @@ const work = [
       { name: 'express.js' },
     ],
     image: '/assets/work/Screenshot 2024-09-08 180212.png',
-    live: '',
-    github: '',
+    live: 'https://the-art-studio-client-side-89lzweyb7-minhajs-projects.vercel.app/',
+    github: 'https://github.com/Minhaj99466/THE-ART-STUDIO-SERVER-SIDE.git',
   },
   {
     num: "03",
-    name: 'E-Commerce',
-    description: "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Id sit, laudantium pariatur ullam vero cupiditate earum eum.",
+    name: 'Solar(E-commerce)',
+    description: "Built an e-commerce site for solar panels with an integrated calculator to estimate panel needs. ",
     stack: [
       { name: 'html 5' },
       { name: 'css3' },
@@ -54,7 +54,7 @@ const work = [
     ],
     image: '/assets/work/Screenshot 2024-09-08 182143.png',
     live: '',
-    github: '',
+    github: 'https://github.com/Minhaj99466/Typhoon.git',
   },
 ]
 
@@ -74,7 +74,7 @@ const WorkPage = () => {
             <div className="flex flex-col gap-[30px]">
               <div className="text-8xl leading-none font-extrabold text-transparent text-outline">{project.num}</div>
               <h3 className="
-              text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize">{project.name} project</h3>
+              text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize">{project.name}</h3>
               <p className="text-white/60">{project.description}</p>
               <ul className="flex flex-wrap gap-4 text-accent">
                 {project.stack.map((item, index) => (
@@ -87,7 +87,7 @@ const WorkPage = () => {
               </ul>
               <div className="border border-white/20"></div>
               <div className="flex items-center gap-4 ">
-                <Link href="dfd">
+                <Link href={project.live}>
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
                       <TooltipTrigger className="w-[60px] h-[60px] rounded-full bg-white/5 flex justify-center items-center group">
@@ -99,14 +99,14 @@ const WorkPage = () => {
                     </Tooltip>
                   </TooltipProvider>
                 </Link>
-                <Link href="dfd">
+                <Link href={project.github}>
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
                       <TooltipTrigger className="w-[60px] h-[60px] rounded-full bg-white/5 flex justify-center items-center group">
                         <BsGithub className="text-white text-3xl group-hover:text-accent" />
                       </TooltipTrigger>
                       <TooltipContent>
-                        <p>Live Project</p>
+                        <p>Visit Git</p>
                       </TooltipContent>
                     </Tooltip>
                   </TooltipProvider>
@@ -123,10 +123,10 @@ const WorkPage = () => {
             className="xl:h-[460px] mb-12 xl:mb-0">
               {work.map((item,index)=>(
                 <SwiperSlide className="w-full" key={index}>
-                  <div className="h-[430px] relative group flex justify-center items-center bg-pink-50/20">
+                  <div className="h-[430px] relative group flex justify-center items-center bg-pink-50/0">
                   <div className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-10 "></div>
                   <div className="relative w-full h-full">
-                    <Image fill  src={item.image} alt="work-image" className="object-fill"/>
+                    <Image fill  src={item.image} alt="work-image" className="object-cover"/>
                   </div>
                   </div>
                 </SwiperSlide>

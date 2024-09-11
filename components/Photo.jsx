@@ -24,7 +24,7 @@ priority
 quality={100}
 fill
 alt='profile'
-className='object-contain custom-filter'
+className='object-contain custom-filter rounded-3xl'
 
 />
       </div>
