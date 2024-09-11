@@ -123,10 +123,10 @@ const WorkPage = () => {
             className="xl:h-[460px] mb-12 xl:mb-0">
               {work.map((item,index)=>(
                 <SwiperSlide className="w-full" key={index}>
-                  <div className="h-[430px] relative group flex justify-center items-center bg-pink-50/0">
+                  <div className="h-[170px] md:h-[180px] xl:h-[430px] relative group flex justify-center items-center bg-pink-50/0">
                   <div className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-10 "></div>
                   <div className="relative w-full h-full">
-                    <Image fill  src={item.image} alt="work-image" className="object-contain"/>
+                    <Image fill  src={item.image} alt="work-image" className="object-contain xl:object-contain"/>
                   </div>
                   </div>
                 </SwiperSlide>
