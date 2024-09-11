@@ -123,15 +123,15 @@ const WorkPage = () => {
             className="xl:h-[460px] mb-12 xl:mb-0">
               {work.map((item,index)=>(
                 <SwiperSlide className="w-full" key={index}>
-                  <div className="h-[170px] md:h-[180px] xl:h-[430px] relative group flex justify-center items-center bg-pink-50/0">
+                  <div className=" relative group flex justify-center items-center bg-pink-50/0">
                   <div className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-10 "></div>
                   <div className="relative w-full h-full">
-                    <Image fill  src={item.image} alt="work-image" className="object-contain xl:object-contain"/>
+                    <Image  loading="lazy"  height={340} width={960}  src={item.image} alt="work-image" className="object-fill"/>
                   </div>
                   </div>
                 </SwiperSlide>
               ))}
-              <WorkSliderBtns containerStyles="flex gap-2 absolute right-0 bottom-[calc(50%_-_22px)] xl:bottom-0 z-20 w-full justify-between xl:w-max xl:justify-none" btnStyles="bg-accent hover:bg-accent-hover text-primary text-[22px] w-[44px] h-44px] flex justify-center items-center transition-all"/>
+              <WorkSliderBtns containerStyles="flex gap-2 absolute right-0 bottom-[calc(50%_-_22px)] xl:bottom-20 z-20 w-full justify-between xl:w-max xl:justify-none" btnStyles="bg-accent hover:bg-accent-hover text-primary text-[22px] w-[44px] h-44px] flex justify-center items-center transition-all"/>
             </Swiper>
           </div>
         </div>
