@@ -50,10 +50,8 @@ const Contact = () => {
         },
         body: json
     });
-    console.log(response);
     
     const result = await response.json();
-    console.log(result);
     
     if (result.success) {
       setNotification({ type: 'success', message: 'Your message has been sent successfully!' });
