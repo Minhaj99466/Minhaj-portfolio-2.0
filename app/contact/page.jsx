@@ -38,8 +38,6 @@ const Contact = () => {
     
 
     formData.append("access_key", secretKey);
-    console.log(secretKey);
-    
 
     const object = Object.fromEntries(formData);
     const json = JSON.stringify(object);
@@ -52,11 +50,8 @@ const Contact = () => {
         },
         body: json
     });
-    console.log(response);
     
     const result = await response.json();
-    console.log(result);
-    
     if (result.success) {
       setNotification({ type: 'success', message: 'Your message has been sent successfully!' });
       setTimeout(() => {
