@@ -43,7 +43,7 @@ const Service = () => {
                 <div className='text-4xl text-outline font-extrabold text-transparent ' >
                   {item.num}
                 </div>
-                <Link className='w-[50px] h-[50px] rounded-full bg-white flex justify-center items-center group-hover:bg-accent-hover  transition-all hover:-rotate-45 duration-700'  href="hjg">
+                <Link className='w-[50px] h-[50px] rounded-full bg-white flex justify-center items-center group-hover:bg-accent-hover  transition-all hover:-rotate-45 duration-700'  href="https://github.com/Minhaj99466/">
                   <BsArrowDownRight className='text-3xl text-primary '/>
                 </Link>
               </div>
