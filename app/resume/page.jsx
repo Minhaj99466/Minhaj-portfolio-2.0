@@ -56,8 +56,13 @@ const experience = {
    " Explore my experience to see how I’ve contributed to various teams and projects with skill and innovation.",
   items: [
     {
+      company: "Envaq Technologies",
+      position: "Full Stack Developer (MERN)",
+      duration: "2024 - present",
+    },
+    {
       company: "Freelancer",
-      position: "Full Stack Developer",
+      position: "Full Stack Developer (MERN)",
       duration: "2024 - present",
     },
     {
@@ -67,7 +72,7 @@ const experience = {
     },
     {
       company: "Brototype",
-      position: "Full Stack Developer",
+      position: "Full Stack Developer (MERN)",
       duration: "2023 -2024",
     },
   ],
