@@ -31,11 +31,13 @@ const info = [
 const Contact = () => {
   const [notification, setNotification] = useState(null);
   const secretKey = process.env.NEXT_PUBLIC_SECRET_KEY;
+console.log("secretkey ",secretKey);
+
 
   async function handleSubmit(event) {
     event.preventDefault();
     const formData = new FormData(event.target);
-    
+
 
     formData.append("access_key", secretKey);
 
@@ -43,28 +45,28 @@ const Contact = () => {
     const json = JSON.stringify(object);
 
     const response = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json"
-        },
-        body: json
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json"
+      },
+      body: json
     });
-    
+
     const result = await response.json();
     if (result.success) {
       setNotification({ type: 'success', message: 'Your message has been sent successfully!' });
       setTimeout(() => {
         window.location.reload();
-      }, 2000); 
-  } else {
+      }, 2000);
+    } else {
       setNotification({ type: 'error', message: 'There was an error sending your message. Please try again.' });
+    }
   }
-}
   return (
     <motion.section initial={{ opacity: 0 }} animate={{ opacity: 1, transition: { delay: 2.4, ease: 'easeIn', duration: 0.4 } }} className="py-6 xl:py-0">
       <div className="container mx-auto">
-      {notification && (
+        {notification && (
           <div className={`fixed top-0 left-0 w-full p-4 text-white ${notification.type === 'success' ? 'bg-green-500' : 'bg-red-500'} z-50`}>
             {notification.message}
           </div>
@@ -76,8 +78,8 @@ const Contact = () => {
               <p className="text-white/60">Reach out through the form below for any inquiries. Please provide your details and message, and I'll respond as soon as possible.</p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 ">
-              <Input type="hidden" name="from_name" value="Minhaj Portfolio Enquiry check it out" />
-                <Input type="firstname" name="firstname" required placeholder="Firstname"  />
+                <Input type="hidden" name="from_name" value="Minhaj Portfolio Enquiry check it out" />
+                <Input type="firstname" name="firstname" required placeholder="Firstname" />
                 <Input type="lastname" name="lastname" required placeholder="Lastname" />
                 <Input type="email" name="subject" required placeholder="Email address" />
                 <Input type="mobile" name="number" required placeholder="Phone number" />
@@ -89,7 +91,7 @@ const Contact = () => {
                 <SelectContent >
                   <SelectGroup >
                     <SelectLabel >Select A service</SelectLabel>
-                    <SelectItem  key="web-dev" value="est">Web Development</SelectItem>
+                    <SelectItem key="web-dev" value="est">Web Development</SelectItem>
                     <SelectItem key="ui-dev" value="cst">UI Development</SelectItem>
                     <SelectItem key="logo-dev" value="mst">Logo Development</SelectItem>
                     <SelectItem value="cns" key="consulting">Other</SelectItem>
@@ -98,7 +100,7 @@ const Contact = () => {
                 </SelectContent>
               </Select>
               <Textarea required name="description" className="h-[100px]" placeholder="Type your message here" />
-              <Button size="md" type="submit" className="max-w-40">Send Message <FaTools/></Button>
+              <Button size="md" type="submit" className="max-w-40">Send Message <FaTools /></Button>
             </form>
           </div>
           <div className="flex-1 justify-center flex items-center xl:justify-end order-1 xl:order-none mb-8 xl:mb-0">
