@@ -32,7 +32,6 @@ const Contact = () => {
   const [notification, setNotification] = useState(null);
   const secretKey = process.env.NEXT_PUBLIC_SECRET_KEY;
 
-
   async function handleSubmit(event) {
     event.preventDefault();
     const formData = new FormData(event.target);
